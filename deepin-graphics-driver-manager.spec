@@ -3,7 +3,7 @@
 %global _unpackaged_files_terminate_build 0 
 Name:          deepin-graphics-driver-manager
 Version:       5.0.0
-Release:       1
+Release:       2
 Summary:       deepin driver manager.
 
 License:       GPLv3
@@ -12,6 +12,7 @@ Source0:       %{name}-%{version}.orig.tar.xz
 
 BuildRequires: cmake
 BuildRequires: qt5-qtbase-devel
+BuildRequires: dtkcore-devel
 BuildRequires: dtkwidget-devel
 BuildRequires: deepin-gettext-tools
 BuildRequires: freeglut
@@ -46,5 +47,8 @@ rm -rf  %{?buildroot}%{_libdir}/%{name}/debug/
 
 
 %changelog
+* Fri Aug 28 2020 chenbo pan <panchenbo@uniontech.com> - 5.0.10-2
+- fix compile fail
+
 * Thu Jul 30 2020 openEuler Buildteam <buildteam@openeuler.org> - 5.0.0-1
 - Package init
